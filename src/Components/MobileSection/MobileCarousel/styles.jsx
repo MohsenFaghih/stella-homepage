@@ -7,7 +7,7 @@ const useStyles = makeStyles({
         position: 'relative',
         overflow: 'hidden',
         borderRadius: 70,
-        '@media (max-width:780px)':{
+        '@media (max-width:1100px)':{
             display: 'none'
         }
     },

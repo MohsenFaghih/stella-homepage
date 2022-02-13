@@ -5,6 +5,7 @@
     max-width: 1920;
     min-height: 600px;
     max-height: 88vh;
+    height: 88vh;
 }
 .MainSectionRoot{
     max-width: 1920px;
@@ -26,7 +27,7 @@
 }
 @media screen and (max-width : 780px) {
     .HeaderRoot{
-        min-height: 450px;
-        max-height: 450px;
+        min-height: 70vh;
+        max-height: 70vh;
     }
 }

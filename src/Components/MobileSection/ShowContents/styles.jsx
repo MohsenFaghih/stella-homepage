@@ -26,6 +26,9 @@ const useStyles = makeStyles({
             '& img':{
                 marginRight: 30,
             }
+        },
+        '@media (max-width: 780px)':{
+            padding: 0
         }
     }
 });

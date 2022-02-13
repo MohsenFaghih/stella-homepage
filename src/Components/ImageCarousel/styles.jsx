@@ -5,27 +5,27 @@ const useStyles = makeStyles({
         position: 'absolute',
         width: '100%',
         maxHeight: '88vh',
-        minHeight: '600px !important',
+        height: '100%',
+        minHeight: '100% !important',
         '& div':{
             width: '100%',
-            height: '100%',
+            height: '100% !important',
             maxHeight: '88vh',
-            minHeight: '600px !important',
+            minHeight: '100% !important',
         },
         '& img':{
             width: '100%',
             maxHeight: '88vh',
-            minHeight: '600px !important',
             height: '100%',
+            objectFit: 'cover',
             '@media (max-width:780px)':{
-                minHeight: '450px !important',
-                height: 'auto',
+                height: '70vh',
             }
         }
     },
     img:{
         width: '100%',
-        // marginTop: '-67px',
+        height: '100%',
         maxHeight: '88vh',
         minHeight: '600px !important'
     }

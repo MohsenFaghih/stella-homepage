@@ -17,8 +17,8 @@ const useStyles = makeStyles({
             lineHeight: '100px',
             margin: 0,
             '@media (max-width:780px)':{
-                fontSize: 40,
-                lineHeight: '40px',
+                fontSize: 60,
+                lineHeight: '60px',
             }
         },
         '& h4':{

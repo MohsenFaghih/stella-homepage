@@ -5,10 +5,11 @@ const useStyles = makeStyles({
         marginTop: '-67px',
         width: '100%',
         maxHeight: '88vh',
+        height: '88vh',
         minHeight: '600px !important',
         '@media (max-width:780px)':{
-            maxHeight: '450px !important',
-            minHeight: '450px !important',
+            maxHeight: '70vh !important',
+            minHeight: '70vh !important',
         }
     },
     img:{
@@ -30,8 +31,8 @@ const useStyles = makeStyles({
         overflow: 'hidden',
         zIndex: 3,
         '@media (max-width:780px)':{
-            maxHeight: '450px !important',
-            minHeight: '450px !important',
+            maxHeight: '70vh !important',
+            minHeight: '70vh !important',
         }
     },
     gradientRadial:{
@@ -43,8 +44,8 @@ const useStyles = makeStyles({
         background: 'radial-gradient(44.66% 410.44% at 50% 50%, rgba(0, 0, 0, 0) 66.15%, rgba(0, 0, 0, 0.22) 100%)',
         backgroundBlendMode: 'multiply',
         '@media (max-width:780px)':{
-            minHeight: '450px !important',
-            maxHeight: '450px !important',
+            minHeight: '70vh !important',
+            maxHeight: '70vh !important',
         }
     },
     gradientRectangle:{
@@ -60,10 +61,10 @@ const useStyles = makeStyles({
         minHeight: '600px !important',
         position: 'absolute',
         background: 'radial-gradient(44.89% 412.59% at 50% 50%, rgba(0, 0, 0, 0) 88.14%, rgba(0, 0, 0, 0.33) 100%)',
-        transform: 'matrix(1, 1, -6, 97, 19, 100)',
+        transform: 'matrix(1, 1, -6, 97, -6, 100)',
         '@media (max-width:780px)':{
-            maxHeight: '450px !important',
-            minHeight: '450px !important',
+            maxHeight: '70vh !important',
+            minHeight: '70vh !important',
         }
     },
     gradientTextShadow:{

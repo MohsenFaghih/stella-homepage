@@ -14,6 +14,9 @@ const useStyles = makeStyles({
         margin: 'auto',
         display: 'block',
         zIndex: 10,
+        '@media (max-width:1200px)':{
+            marginTop: '-100px',
+        },
     },
     SearchBoxRootContainer:{
         height: '100%',
@@ -30,14 +33,17 @@ const useStyles = makeStyles({
             display: 'block',
             margin: '34px 10px 0 0',
         },
-        '@media (max-width:780px)':{
+        '@media (max-width:1200px)':{
             '&:before':{
                 display: 'none !important',
             },
+        },
+        '@media (max-width:780px)':{
+            minHeight: 80,
             '&:not(:last-child)':{
                 justifyContent: 'flex-start',
                 alignItems: 'flex-end',
-                borderBottom: '1px solid #5b8a99b8',
+                borderBottom: '1px solid #517f8f40',
                 margin: '0 20px',
             }
         },
@@ -54,6 +60,9 @@ const useStyles = makeStyles({
         fontFamily: 'GilroySemiBold !important',
         textTransform: 'capitalize !important',
         borderRadius: '20px !important',
+        '@media (max-width: 1200px)':{
+            width: '92%',
+        }
     }
 });
 

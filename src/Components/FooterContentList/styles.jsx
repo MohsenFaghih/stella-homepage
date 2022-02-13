@@ -8,6 +8,9 @@ const useStyles = makeStyles({
         maxWidth: '1400px',
         margin: 'auto',
         color: 'white',
+        '@media (max-width: 780px)':{
+            width: '90% !important',
+        },
         '& ul':{
             margin: 0,
             padding: 0,
