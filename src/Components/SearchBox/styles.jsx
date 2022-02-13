@@ -23,8 +23,8 @@ const useStyles = makeStyles({
         width: '100%',
         minHeight: 100,
         height: '100%',
-        padding: ' 0 0 0 40px !important',
         display: 'flex',
+        justifyContent: 'center',
         '&:not(:first-child):not(:last-child):before':{
             content: '"|"',
             display: 'block',
@@ -34,6 +34,12 @@ const useStyles = makeStyles({
             '&:before':{
                 display: 'none !important',
             },
+            '&:not(:last-child)':{
+                justifyContent: 'flex-start',
+                alignItems: 'flex-end',
+                borderBottom: '1px solid #5b8a99b8',
+                margin: '0 20px',
+            }
         },
         "&:last-child":{
             justifyContent: 'space-around',

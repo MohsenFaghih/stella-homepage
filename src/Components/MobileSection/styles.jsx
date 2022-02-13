@@ -5,21 +5,27 @@ const useStyles = makeStyles({
         position: 'relative',
         maxWidth: 1920,
         width: '100%',
-        // height: 730,
-        // maxHeight: 730,
         height: 'auto',
         display: 'flex',
+        '@media (max-width:780px)':{
+            marginBottom: 80,
+        }
     },
     patten:{
         position: 'absolute',
-        // height: 730,
-        // maxHeight: 730,
+        height: 730,
+        maxHeight: 730,
         left: 0,
         top: 0,
         width: '100%',
         maxWidth: 1920,
         backgroundColor: '#D9E5E9',
         zIndex: '-1',
+        '@media (max-width:780px)':{
+            height: '100%',
+            maxHeight: '100%',
+            paddingBottom: 40
+        }
     },
     MobileSectionContainer:{
         width: '80%',

@@ -8,6 +8,9 @@ const useStyles = makeStyles({
         flexWrap: 'wrap',
         flexDirection: 'column',
         position: 'relative',
+        '@media (max-width: 780px)':{
+            width: '98%'
+        }
     },
     inputlabel:{
         postition: 'relative important',
@@ -28,6 +31,9 @@ const useStyles = makeStyles({
         padding: '1px 6px',
         position: 'relative',
         justifyContent: 'space-between',
+        '@media (max-width: 780px)':{
+            width: '100%'
+        }
     },
     placeholder:{fontSize: 19,fontFamily: 'Gilroy'},
     listItem:{fontSize: 19,fontFamily:'GilroySemiBold'},

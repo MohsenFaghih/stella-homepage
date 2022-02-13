@@ -35,7 +35,7 @@ const MobileSection = () => {
 
     return (
         <div className={styles.MobileSectionRoot}>
-            <div className={styles.patten} style={{maxHeight: isMobile?1500:730, height: isMobile?'100%':730}}></div>
+            <div className={styles.patten}></div>
             <div className={styles.MobileSectionContainer}>
                 <ShowContents contentData={contentData} isMobile={isMobile}>
                     {{StartRate: <StarRate />, IconView: <IconView />}}

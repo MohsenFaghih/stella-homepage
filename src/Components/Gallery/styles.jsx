@@ -70,6 +70,10 @@ const useStyles = makeStyles({
         filter: 'blur(.4px)',
         borderRadius: '16px',
         maxWidth: 500,
+        '@media (max-width: 780px)':{
+            margin: '-40px 15px 10px 15px',
+
+        }
     },
     secondGrid:{
         textAlign: 'right',

@@ -30,7 +30,7 @@ const SearchBox = () => {
 
   return (
     <Box className={styles.SearchBoxRoot}>
-        <Grid container className={styles.SearchBoxRootContainer} spacing={2}>
+        <Grid container className={styles.SearchBoxRootContainer}>
             {searchItems.map(i=>(
               <Grid className={styles.searchBoxitem} key={i.label} item md={i.size} xs={12}>
                 {selectElement(i)}
