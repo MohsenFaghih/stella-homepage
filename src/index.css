@@ -1,13 +1,26 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy-Light.otf"),
+    url("./assets/font/Gilroy/Gilroy-Light.otf") format("truetype");
+}
+@font-face {
+  font-family: "GilroySemiBold";
+  src: local("Gilroy-Semibold.ttf"),
+    url("./assets/font/Gilroy/Gilroy-Semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GilroyBold";
+  src: local("Gilroy-ExtraBold.otf"),
+    url("./assets/font/Gilroy/Gilroy-ExtraBold.otf") format("truetype");
+}
+@font-face {
+  font-family: "InterMedium";
+  src: local("Inter-Medium.ttf"),
+    url("./assets/font/Inter/Inter-Medium.ttf") format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (max-width : 780px) {
+  .rdrDefinedRangesWrapper {
+    display: none;
+  }
 }

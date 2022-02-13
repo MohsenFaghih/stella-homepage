@@ -1,0 +1,32 @@
+.HeaderRoot{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 1920;
+    min-height: 600px;
+    max-height: 88vh;
+}
+.MainSectionRoot{
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    z-index: 10;
+    display: block;
+    position: relative;
+}
+.FooterRoot{
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+    position: relative;
+    background-color: #2B4650;
+}
+@media screen and (max-width : 780px) {
+    .HeaderRoot{
+        min-height: 450px;
+        max-height: 450px;
+    }
+}

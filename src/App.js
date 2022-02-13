@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ContextDataProvider from './Contexts/ContextData';
+import { HomePage, NotFound } from './Pages';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // newest version of react-router (V6)
+    // make all data accessible whole project by context hook
+    <ContextDataProvider>
+      <Router>
+        <div className="App container">
+            <Routes>
+              <Route  path="/" exact element={<HomePage />} />
+              <Route  element={<NotFound />} />  {/* Not found 404 */}
+            </Routes>
+        </div>
+      </Router>
+    </ContextDataProvider>
   );
 }
 
