@@ -34,7 +34,10 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: '57px'
+        marginTop: '57px',
+        '@media (max-width:780px)':{
+            width: '88%',
+        }
     }
 });
 

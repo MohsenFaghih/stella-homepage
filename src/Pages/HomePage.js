@@ -10,11 +10,11 @@ import { Navbar,
          FooterContentList
         } from '../Components';
 
-const HomePage = () => {
+const HomePage = ({languageOptions}) => {
   return (
     <div>
       <Header>
-        {{nav: <Navbar />, image: <FullWidthImage />, content: <ImageCenterContent />}}      
+        {{nav: <Navbar languageOptions={languageOptions} />, image: <FullWidthImage />, content: <ImageCenterContent />}}      
       </Header>
       <MainSection>
         {{search: <SearchBox />, featured: <FeaturedSlider />, mobile: <MobileSection />, gallery: <Gallery />}}

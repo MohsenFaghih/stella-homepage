@@ -24,3 +24,9 @@
     display: none;
   }
 }
+
+@font-face {
+  font-family: "NotoNaskhArabic";
+  src: local("NotoNaskhArabic-Regular.ttf"),
+    url("./assets/font/Noto/NotoNaskhArabic-Regular.ttf") format("truetype");
+}
