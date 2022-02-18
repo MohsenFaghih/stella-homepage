@@ -1,15 +1,20 @@
 import React,{useEffect, useState} from 'react';
 import useStyles from './styles';
 import { DateRangePicker } from 'react-date-range';
+import { ar, enUS } from 'date-fns/locale';
 import { addDays } from 'date-fns';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
+import {useTranslation} from 'react-i18next';
+import cookies from 'js-cookie'
 
 const InputCalendar = ({label, placeholder}) => {
 
     const styles = useStyles()
     const [state, setState] = useState([{startDate: new Date(),endDate: addDays(new Date(), 7),key: 'selection'}]);
-    const [anchorEl, setAnchorEl] = useState(null);
+    // const [anchorEl, setAnchorEl] = useState(null);
+    const {t} = useTranslation()
+    const lng = cookies.get('i18next')
 
     //Handle set calendar date
     function renderValue() {
@@ -38,7 +43,7 @@ const InputCalendar = ({label, placeholder}) => {
 
     return (
         <div className={`${styles.CalendarFormRoot} calendar`} key={label} onClick={showCalendar} >
-            <label className={styles.inputlabel}>{label}</label>
+            <label className={styles.inputlabel}>{t(`${label}`)}</label>
             <div className={styles.calenderInput}>{renderValue()}</div>
             <DateRangePicker
                 onChange={item => setState([item.selection])}
@@ -47,12 +52,13 @@ const InputCalendar = ({label, placeholder}) => {
                 months={2}
                 ranges={state}
                 // direction="horizontal"
+                locale={lng=='en'?enUS:ar}
                 className={styles.datePicker}
                 orientation={orientation} 
                 autoFocus
             >
             </DateRangePicker>
-        </div>
+        </div>  
     )
 }
 

@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
+import cookies from 'js-cookie'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-const Drawer = () => {
+const Drawer = ({lngHandler}) => {
+    const currentLanguageCode = cookies.get('i18next');
     const [state, setState] = useState(false);
     const toggleDrawer = (open) => (event) => {
         if (
@@ -35,7 +37,9 @@ const Drawer = () => {
                     marginTop: 40,
                 }}>
                     <span style={{position: 'absolute',top: 15, right: 20, color: 'black'}} onClick={toggleDrawer(false)}><CloseIcon /></span>
-                    MENU
+                    <div onClick={(e)=>{lngHandler(e)}} style={{fontFamily: currentLanguageCode === 'en' ? 'NotoNaskhArabic' : 'GilroySemiBold'}}>
+                        {currentLanguageCode === 'en' ? 'العربية' : 'English'}
+                    </div>
                 </div>
             </SwipeableDrawer>
         </div>

@@ -13,7 +13,7 @@ const ImageCenterContent = () => {
         {t('Escape')}<br />{t('the_ordinary')}
       </h1>
       <h4>
-        A new way to stay in your favorite neighbourhoods <br />around the world.
+        {t('image_center_content_p')}
       </h4>
     </div>
   )

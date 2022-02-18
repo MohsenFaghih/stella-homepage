@@ -14,7 +14,7 @@ i18n
       order: [ 'cookie', 'localStorage', 'htmlTag', 'path', 'subdomain' ],
       caches: ['cookie'],
     },
-    backend: { loadPath: 'http://localhost:3000/assets/locales/{{lng}}/translation.json' },
+    backend: { loadPath: './assets/locales/{{lng}}/translation.json' },
     react: { useSuspense: true },
   });
 

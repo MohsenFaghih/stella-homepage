@@ -1,11 +1,13 @@
 import React, {useContext} from 'react';
 import useStyles from './styles';
-// import { ContextData } from '../../Contexts/ContextData';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Grid } from '@mui/material';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import { IconView } from '../index';
+import cookies from 'js-cookie'
+import { ContextData } from '../../Contexts/ContextData';
 
 const Linkedin = () => (
     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,13 +28,14 @@ const Instagram = () => (
 
 const FooterContentList = () => {
     const styles = useStyles()
-    // const isMobile = useContext(ContextData).isMobile
+    const direction = useContext(ContextData).direction;
+    const {t} = useTranslation()
     const socialIcons = [<Linkedin />,<Facebook />,<Instagram />]
 
     const lists = {
-        about: ['Find a Stella', 'Who we are', 'Help center', 'Lease to Stella Stays', 'Blog'],
+        about: ['find_stella', 'who_we_are', 'help_center', 'lease_to_Stella_Stays', 'blog'],
         cities: ['Dubai', 'Montreal', 'Manama'],
-        'contact us': ['WhatsApp', 'Email'],
+        'contact_us': ['whatsApp', 'email'],
     }
 
     const ShowFooterList = (lists) => {
@@ -40,10 +43,10 @@ const FooterContentList = () => {
             return (
                 Object.keys(lists).map(title=>(
                     <Grid key={title} item md={2} xs={12} pt='30px' pl='5px'>
-                        <span className={styles.listTitle}>{title}</span>
+                        <span className={styles.listTitle}>{t(`${title}`)}</span>
                         <List>
                             {lists[title].map(item=>(
-                                <ListItem key={item}><Link to='#'>{item}</Link></ListItem>
+                                <ListItem key={item}><Link to='#'>{t(`${item}`)}</Link></ListItem>
                             ))}
                         </List>
                     </Grid>
@@ -53,20 +56,20 @@ const FooterContentList = () => {
     }
 
     return (
-        <Grid container className={styles.FooterContentListRoot}>
+        <Grid container className={styles.FooterContentListRoot} style={{direction}}>
             <Grid item md={12} mt='75px' mb='75px'>
                 <Grid item md={12}><img src={`${process.env.PUBLIC_URL}/logo.png`} alt='Logo' /></Grid>
                 <Grid container>
                     {ShowFooterList(lists)}
                     <Grid item md={6} xs={12} pt='30px' pl='5px'>
-                        <p className={styles.listTitle} style={{marginTop: 0}}>download</p>
+                        <p className={styles.listTitle} style={{marginTop: 0}}>{t('download')}</p>
                         <IconView />
                     </Grid>
                 </Grid>
             </Grid>
             <Grid container flexDirection='row' pt='20px' pb='20px' alignItems='center' className={styles.footerBottom}>
-                <Grid item md={4} xs={12}><span>Copyright © 2021 StellaStays Inc. All rights reserved.</span></Grid>
-                <Grid item md={4} xs={12}><span>Terms and conditions  ·  Privacy policy</span></Grid>
+                <Grid item md={4} xs={12}><span>{t('copyright')}</span></Grid>
+                <Grid item md={4} xs={12}><span>{t('terms')}</span></Grid>
                 <Grid item md={4} xs={12}>
                     <Grid container flexDirection='row' justifyContent='flex-end' className={styles.socialIcons}>
                         {socialIcons.map((icon, i)=>(

@@ -4,11 +4,13 @@ import SelectUnstyled, { selectUnstyledClasses } from '@mui/base/SelectUnstyled'
 import OptionUnstyled, { optionUnstyledClasses } from '@mui/base/OptionUnstyled';
 import PopperUnstyled from '@mui/base/PopperUnstyled';
 import { styled } from '@mui/system';
+import {useTranslation} from 'react-i18next'
 
 const InputList = ({label, placeholder, list}) => {
 
     const styles = useStyles()
-    function createMunuItem(){if(list) return list.map(l=><StyledOption key={l} value={l}>{l}</StyledOption>)}
+    const {t} = useTranslation()
+    function createMunuItem(){if(list) return list.map(l=><StyledOption key={l} value={l}>{t(`${l}`)}</StyledOption>)}
 
     const StyledOption = styled(OptionUnstyled)`
         list-style: none;
@@ -38,7 +40,7 @@ const InputList = ({label, placeholder, list}) => {
         }
     `;
     const StyledPopper = styled(PopperUnstyled)`
-        z-index: 1;
+        z-index: 2;
         box-shadow: 0 0 5px #67767C;
         border-radius: 20px;
         padding: 5px;
@@ -67,6 +69,8 @@ const InputList = ({label, placeholder, list}) => {
         line-height: 1.5;
         color: #000;
         border: none;
+        display: flex;
+        align-items: center;
 
         &.${selectUnstyledClasses.focusVisible} {
             border-bottom: 2px solid #67767C;
@@ -85,18 +89,18 @@ const InputList = ({label, placeholder, list}) => {
 
     function renderValue(option) {
         if (option == null) {
-          return <span className={styles.placeholder}>{placeholder}</span>;
+          return <span className={styles.placeholder}>{t(`${placeholder}`)}</span>;
         }
         return (
           <span className={styles.listItem}>
-            {option.value}
+            {t(`${option.value}`)}
           </span>
         );
     }
 
     return (
         <div className={styles.InputsFormRoot} key={label} >
-            <label className={styles.inputlabel}>{label}</label>
+            <label className={styles.inputlabel}>{t(`${label}`)}</label>
             <CustomSelect renderValue={renderValue}>
                 {createMunuItem()}
             </CustomSelect>

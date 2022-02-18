@@ -1,11 +1,9 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React from "react";
 import FeaturedCard from '../FeaturedCard/FeaturedCard';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { Grid } from "@mui/material";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css'
-import 'swiper/swiper.min.css'
+import 'swiper/swiper.min.css';
 
 const Slider = ({list}) => {
     return(

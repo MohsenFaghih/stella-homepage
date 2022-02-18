@@ -1,5 +1,51 @@
 {
+    "help_center":"Help Center",
+    "contact":"Contact",
     "Escape":"Escape",
-    "the_ordinary":"the ordinary"
+    "the_ordinary":"the ordinary",
+    "image_center_content_p":"A new way to stay in your favorite neighbourhoods \naround the world.",
+    "fearured_slider_item_content":"Spectacular 4 BDR Palm Villa | Beach | Private Pool",
+    "fearured_slider_item_price":"AED 2,549",
+    "fearured_slider_item_city":"Dubai",
+    "fearured_title":"Featured stays",
+    "fearured_content":"Beachfront villas to high rise apartments and penthouses,\n\n experience your next stay with <strong>Stella.<\/strong>",
+    "from":"from",
+    "night":"night",
+    "search":"Search",
+    "city":"City",
+    "dates":"Dates",
+    "guests":"guests",
+    "one_guest":"one guest",
+    "select_city":"Select a city",
+    "select_dates":"Select a Dates",
+    "add_guests":"Add Guests",
+    "Dubai":"Dubai",
+    "Montreal":"Montreal",
+    "Manama":"Manama",
+    "gallery_item_title_1":"Beyond Living",
+    "gallery_item_title_2":"Prime Locations",
+    "gallery_item_title_3":"Nullam efficitur turpis",
+    "gallery_item_title_4":"A Signature of Excellence",
+    "gallery_item_content_1":"Modern and fresh, our spaces are outfitted with comfort and style, be it for a quick getaway to a long term stay.",
+    "gallery_item_content_2":"Breathtaking views in convenient and sought after locations, a little something for everyone.",
+    "gallery_item_content_3":"Phasellus fermentum tellus vitae ante vehicula posuere. Curabitur metus metus, feugiat non semper lacinia, maximus sit amet ligula. Proin dictum quis ipsum.",
+    "gallery_item_content_4":"24/7 guest concierge, seamless check-in and immaculate cleanliness, always a flawless stay.",
+    "find_stella":"Find a Stella",
+    "who_we_are":"Who we are",
+    "lease_to_Stella_Stays":"Lease to Stella Stays",
+    "blog":"Blog",
+    "whatsApp":"WhatsApp",
+    "email":"Email",
+    "contact_us":"contact us",
+    "about":"about",
+    "cities":"cities",
+    "download":"download",
+    "copyright":"Copyright © 2022 StellaStays Inc. All rights reserved.",
+    "terms":"Terms and conditions  ·  Privacy policy"
+    
+    
+
+
+
           
 }

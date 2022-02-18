@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import useStyles from './styles';
 import Slider from './Slider/Slider';
+import {useTranslation} from 'react-i18next';
+import {ContextData} from '../../Contexts/ContextData'
 
 const FeaturedSlider = () => {
+    const {t} = useTranslation()
     const styles = useStyles()
+    const direction = useContext(ContextData).direction
 
     function importCardImages(r) {
         let images = {};
@@ -18,18 +22,18 @@ const FeaturedSlider = () => {
             key: i,
             name: i,
             id: index,
-            content: 'Spectacular 4 BDR Palm Villa | Beach | Private Pool',
-            price: 'AED 2,549',
-            city: 'Dubai',
+            content: 'fearured_slider_item_content',
+            price: 'fearured_slider_item_price',
+            city: 'fearured_slider_item_city',
             guests: 4
         }
     ))
 
     return (
         <div className={styles.FeaturedSliderRoot}>
-            <p className={styles.FearuredTitle}>Featured stays</p>
-            <p className={styles.FearuredContent}>
-                Beachfront villas to high rise apartments and penthouses,<br /> experience your next stay with <strong>Stella.</strong>
+            <p style={{direction}} className={styles.FearuredTitle}>{t('fearured_title')}</p>
+            <p style={{direction}} className={styles.FearuredContent}>
+                {t('fearured_content')}
             </p>
             <Slider list={list} />
         </div>

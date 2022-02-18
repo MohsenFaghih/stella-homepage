@@ -48,7 +48,7 @@ const useStyles = makeStyles({
         justifyContent: 'center',
         margin: '16px 23px 0 23px',
         cursor: 'pointer',
-        minWidth: '52px',
+        minWidth: '61px',
     },
     navbarTtText:{
         display: 'flex',

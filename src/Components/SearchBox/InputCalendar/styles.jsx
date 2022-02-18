@@ -34,6 +34,7 @@ const useStyles = makeStyles({
         backgroundColor: 'white',
         borderRadius: '20px',
         position: 'absolute',
+        direction: 'ltr !important',
         top: 0,
         left: -300,
         position: 'absolute',

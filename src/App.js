@@ -36,6 +36,7 @@ function App() {
     // newest version of react-router (V6)
     // make all data accessible whole project by context hook
     <ContextDataProvider>
+      {changeArabicFont()}
       <Router>
         <div className="App container">
             <Routes>

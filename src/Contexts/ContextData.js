@@ -1,5 +1,6 @@
 import React , {createContext, useState, useEffect} from 'react';
 import { ResizeListener } from '../Components';
+import cookies from 'js-cookie'
 
 export const ContextData = createContext();
 
@@ -12,8 +13,11 @@ const ContextDataProvider = (props) => {
         else setIsMobile(false)
     },[windowSize])
 
+    const direction = cookies.get('i18next')==='en' ? 'ltr' : 'rtl';
+
     const context={
-        isMobile: isMobile
+        isMobile: isMobile,
+        direction: direction
     }
     
     return (
